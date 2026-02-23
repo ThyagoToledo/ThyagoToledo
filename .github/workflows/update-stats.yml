@@ -9,7 +9,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   update:
@@ -17,34 +16,32 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Update README with authenticated stats
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           # Atualizar URLs com token no README.md
-          sed -i "s|github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true|github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&token=${PAT_TOKEN}|g" README.md
-          sed -i "s|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight&token=${PAT_TOKEN}|g" README.md
+          sed -i "s|&hide_border=true$|&hide_border=true\&include_all_commits=true\&count_private=true\&token=${PAT_TOKEN}|g" README.md
+          sed -i "s|&theme=tokyonight$|&theme=tokyonight\&token=${PAT_TOKEN}|g" README.md
 
       - name: Update index.html with authenticated stats
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           # Atualizar URLs com token no index.html
-          sed -i "s|github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true|github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&token=${PAT_TOKEN}|g" index.html
-          sed -i "s|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight&token=${PAT_TOKEN}|g" index.html
+          sed -i "s|&hide_border=true\" |&hide_border=true\&include_all_commits=true\&count_private=true\&token=${PAT_TOKEN}\" |g" index.html
+          sed -i "s|&theme=tokyonight\" |&theme=tokyonight\&token=${PAT_TOKEN}\" |g" index.html
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
           
           if git diff --quiet; then
             echo "No changes detected"
           else
             git add README.md index.html
             git commit -m "chore: Update GitHub Stats with authenticated token"
-            git push origin main
+            git push
           fi

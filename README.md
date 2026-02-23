@@ -10,17 +10,21 @@
 
 ### Gargantua — Simulação de Buraco Negro
 
-<p align="center">
-  <a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
-    <img src="gargantua_preview.png" alt="Gargantua Black Hole Simulation" width="100%" />
-  </a>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
-    <img src="https://img.shields.io/badge/%E2%96%B6%20Abrir%20Simulação%20Ao%20Vivo-Gargantua%20Black%20Hole-000000?style=for-the-badge&logo=threedotjs&logoColor=FF8C00&labelColor=0a0a0a" alt="Live Demo" />
-  </a>
-</p>
+<a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
+  <img src="https://raw.githubusercontent.com/ThyagoToledo/ThyagoToledo/main/gargantua_preview.gif"
+       alt="▶ Clique para abrir a simulação ao vivo — Gargantua Black Hole"
+       width="100%" />
+</a>
+
+> *Clique no GIF para abrir a simulação interativa completa em tempo real.*
+
+<a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
+  <img src="https://img.shields.io/badge/%E2%96%B6%20ABRIR%20SIMULAÇÃO%20AO%20VIVO-GARGANTUA%20BLACK%20HOLE-000000?style=for-the-badge&logo=threedotjs&logoColor=FF8C00&labelColor=0a0a0a" alt="Live Demo" />
+</a>
+
+</div>
 
 > Uma simulação realista de buraco negro com ray marching e lente gravitacional física, renderizada em tempo real com **GLSL / WebGL** e **Three.js**. Inspirada no Gargantua do filme *Interestelar*.
 
@@ -52,6 +56,10 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" height="45" alt="TypeScript" title="TypeScript" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" height="45" alt="Python" title="Python" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" height="45" alt="Go" title="Go" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" height="30" alt="SQL" title="SQL" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" />
   <img width="12"/>
@@ -103,8 +111,8 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" height="165" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&cache_seconds=21600" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=10&hide_border=true&theme=tokyonight&cache_seconds=21600" height="165" alt="Top Languages" />
 </div>
 
 ---
@@ -122,7 +130,7 @@
 | [penetrometre](https://github.com/ThyagoToledo/penetrometre) | Ferramenta de medição e análise — co-autoria com [cauacruvinel](https://github.com/cauacruvinel) | Python |
 | [IgnisEngine](https://github.com/URSoftware/IgnisEngine) | Game engine desenvolvida pela URSoftware | Java |
 | [Site-Aprendendo-Programa-o](https://github.com/ThyagoToledo/Site-Aprendendo-Programa-o) | Site educativo para aprender programação | HTML · CSS · JavaScript |
-| [the-money-savior-telegram-bot](https://github.com/AmrmDev/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | Python |
+| [the-money-savior-telegram-bot](https://github.com/AmrmDev/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | GoLang · AWS · AWS Lambda |
 
 ---
 

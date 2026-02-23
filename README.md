@@ -11,13 +11,13 @@
 ### Gargantua — Simulação de Buraco Negro
 
 <p align="center">
-  <a href="https://thyagotoledo.github.io/Banner/Gargantua.html" target="_blank">
+  <a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
     <img src="https://readme-typing-svg.demolab.com?font=Courier+New&size=26&duration=2500&pause=1200&color=FF8C00&background=000000&center=true&vCenter=true&width=680&height=140&lines=GARGANTUA;Simulação+de+Buraco+Negro;Renderização+GLSL+%2F+WebGL;Clique+para+abrir+a+simulação" alt="Gargantua Black Hole Simulation" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://thyagotoledo.github.io/Banner/Gargantua.html" target="_blank">
+  <a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
     <img src="https://img.shields.io/badge/%E2%96%B6%20Abrir%20Simulação%20Ao%20Vivo-Gargantua%20Black%20Hole-000000?style=for-the-badge&logo=threedotjs&logoColor=FF8C00&labelColor=0a0a0a" alt="Live Demo" />
   </a>
 </p>
@@ -87,8 +87,8 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" height="165" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=1800" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=8&hide_border=true&theme=tokyonight&cache_seconds=1800" height="165" alt="Top Languages" />
 </div>
 
 ---

@@ -31,14 +31,18 @@ jobs:
           sed -i "s|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight|github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight&token=${PAT_TOKEN}|g" index.html
 
       - name: Commit and push changes
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global credential.helper store
+          echo "https://x-access-token:${PAT_TOKEN}@github.com" > ~/.git-credentials
           
           if git diff --quiet; then
             echo "No changes detected"
           else
             git add README.md index.html
             git commit -m "chore: Update GitHub Stats with authenticated token"
-            git push
+            git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
           fi

@@ -111,8 +111,8 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&cache_seconds=21600" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=10&hide_border=true&theme=tokyonight&cache_seconds=21600" height="165" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&hide_border=true&theme=tokyonight" height="165" alt="Top Languages" />
 </div>
 
 ---

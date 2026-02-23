@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://thyagotoledo.github.io/ThyagoToledo/Gargantua.html" target="_blank">
-    <img src="https://readme-typing-svg.demolab.com?font=Courier+New&size=26&duration=2500&pause=1200&color=FF8C00&background=000000&center=true&vCenter=true&width=680&height=140&lines=GARGANTUA;Simulação+de+Buraco+Negro;Renderização+GLSL+%2F+WebGL;Clique+para+abrir+a+simulação" alt="Gargantua Black Hole Simulation" />
+    <img src="gargantua_preview.png" alt="Gargantua Black Hole Simulation" width="100%" />
   </a>
 </p>
 
@@ -63,9 +63,25 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" height="45" alt="Node.js" title="Node.js" />
   <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" height="45" alt="Express.js" title="Express.js" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" height="45" alt="Spring Boot" title="Spring Boot" />
+  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" height="45" alt="Android" title="Android" />
   <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" height="45" alt="React" title="React" />
+  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" height="45" alt="Three.js" title="Three.js" />
+</div>
+
+**Cloud & Serviços**
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="45" alt="AWS" title="AWS" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazon-dynamodb&logoColor=white" height="30" alt="DynamoDB" title="DynamoDB" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat-square&logo=aws-lambda&logoColor=white" height="30" alt="AWS Lambda" title="AWS Lambda" />
 </div>
 
 **Ferramentas & DevOps**
@@ -87,8 +103,8 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=1800" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=8&hide_border=true&theme=tokyonight&cache_seconds=1800" height="165" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=ThyagoToledo&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ThyagoToledo&layout=compact&langs_count=8&hide_border=true&theme=tokyonight" height="165" alt="Top Languages" />
 </div>
 
 ---
@@ -106,6 +122,7 @@
 | [penetrometre](https://github.com/ThyagoToledo/penetrometre) | Ferramenta de medição e análise — co-autoria com [cauacruvinel](https://github.com/cauacruvinel) | Python |
 | [IgnisEngine](https://github.com/URSoftware/IgnisEngine) | Game engine desenvolvida pela URSoftware | Java |
 | [Site-Aprendendo-Programa-o](https://github.com/ThyagoToledo/Site-Aprendendo-Programa-o) | Site educativo para aprender programação | HTML · CSS · JavaScript |
+| [the-money-savior-telegram-bot](https://github.com/AmrmDev/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | Python |
 
 ---
 

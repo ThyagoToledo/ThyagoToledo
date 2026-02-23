@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gargantua - Retorno ao Realismo</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; }
+        canvas { display: block; width: 100vw; height: 100vh; }
+        #ui {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: 'Courier New', Courier, monospace;
+            pointer-events: none;
+            text-shadow: 0 0 5px rgba(0,0,0,1);
+        }
+        h1 { margin: 0; font-weight: normal; font-size: 1.5rem; letter-spacing: 5px; text-transform: uppercase; color: #fff5e6; }
+        p { font-size: 0.8rem; margin-top: 5px; opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <h1>Gargantua</h1>
+        <p>Renderização Granular • Lente Gravitacional Física</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform float iTime;
+        uniform vec2 iResolution;
+        uniform vec3 cameraPos;
+        uniform vec3 cameraTarget;
+        
+        varying vec2 vUv;
+
+        // Configurações (Focadas na V1 mas com ajustes)
+        #define MAX_STEPS 120
+        #define BH_RADIUS 1.5
+        #define ACCRETION_INNER 2.2
+        #define ACCRETION_OUTER 16.0 // Mais amplo como no filme
+        #define GLOW_INTENSITY 0.02
+        
+        // Cores Cinematográficas (Pale Beige/White -> Deep Orange)
+        // Cor do centro (muito quente)
+        #define COL_CORE vec3(1.0, 0.95, 0.9) 
+        // Cor da borda (esfriando)
+        #define COL_EDGE vec3(0.8, 0.3, 0.05) 
+
+        // Rotação 2D simples
+        mat2 rot(float a) {
+            float s = sin(a), c = cos(a);
+            return mat2(c, -s, s, c);
+        }
+
+        // === TEXTURA V1 (Ruidosa e Granular) ===
+        // Isso traz de volta o realismo da poeira que você gostou
+        float hash(vec2 p) {
+            p = fract(p * vec2(123.34, 456.21));
+            p += dot(p, p + 45.32);
+            return fract(p.x * p.y);
+        }
+
+        float noise(vec2 p) {
+            vec2 i = floor(p);
+            vec2 f = fract(p);
+            f = f * f * (3.0 - 2.0 * f);
+            float a = hash(i);
+            float b = hash(i + vec2(1.0, 0.0));
+            float c = hash(i + vec2(0.0, 1.0));
+            float d = hash(i + vec2(1.0, 1.0));
+            return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+        }
+
+        float fbm(vec2 p) {
+            float sum = 0.0;
+            float amp = 0.5;
+            // Menos oitavas para manter o "grão", mais frequência
+            float freq = 1.0; 
+            for(int i = 0; i < 5; i++) {
+                sum += noise(p * freq) * amp;
+                amp *= 0.5;
+                freq *= 2.0;
+                p *= rot(0.5); 
+            }
+            return sum;
+        }
+
+        // Função do Disco (Lógica da V1 aprimorada)
+        vec4 renderDisk(vec3 pos) {
+            float r = length(pos);
+            
+            if (r < ACCRETION_INNER || r > ACCRETION_OUTER) return vec4(0.0);
+
+            // Física Orbital
+            float angle = atan(pos.z, pos.x);
+            float speed = 3.0 / sqrt(r); // Velocidade Kepleriana
+            float rotAngle = angle - iTime * speed * 0.2; // Rotação sentido horário
+
+            // Mapeamento UV Polar (Textura V1)
+            vec2 uv = vec2(r - ACCRETION_INNER, rotAngle * 3.0); 
+            
+            // Textura de Ruído (Poeira)
+            float dust = fbm(uv * vec2(2.0, 5.0)); // Esticado angularmente
+            float detail = fbm(uv * 10.0 + vec2(iTime, 0.0)); // Detalhe fino
+            
+            float density = dust * 0.7 + detail * 0.3;
+            
+            // Fade nas bordas (Suavidade)
+            density *= smoothstep(ACCRETION_INNER, ACCRETION_INNER + 0.5, r);
+            density *= smoothstep(ACCRETION_OUTER, ACCRETION_OUTER - 5.0, r);
+            
+            // Perfil vertical (O disco é fino)
+            density *= exp(-abs(pos.y) * 10.0);
+
+            // Cor baseada na densidade e raio
+            vec3 col = mix(COL_EDGE, COL_CORE, density * 1.5 / sqrt(r));
+            
+            // DOPPLER BEAMING (Crucial para o realismo)
+            // Lado esquerdo (aproximando) brilha, direito (afastando) escurece
+            // Produto escalar entre a velocidade do disco e a visão da câmera
+            vec3 velDir = normalize(vec3(pos.z, 0.0, -pos.x)); // Vetor tangente
+            vec3 viewDir = normalize(pos - cameraPos);
+            float doppler = dot(velDir, viewDir);
+            
+            float beam = (1.0 + doppler * 0.7);
+            beam = beam * beam; // Contraste forte no brilho
+            
+            col *= beam;
+            col *= 2.5; // Brilho HDR
+            
+            return vec4(col, density);
+        }
+
+        void main() {
+            vec2 uv = (vUv - 0.5) * 2.0;
+            uv.x *= iResolution.x / iResolution.y;
+
+            vec3 ro = cameraPos;
+            vec3 ta = cameraTarget;
+            
+            vec3 fwd = normalize(ta - ro);
+            vec3 right = normalize(cross(vec3(0.0, 1.0, 0.0), fwd));
+            vec3 up = cross(fwd, right);
+            vec3 rd = normalize(fwd * 1.5 + right * uv.x + up * uv.y);
+
+            vec3 col = vec3(0.0);
+            float transmittance = 1.0;
+            
+            vec3 p = ro;
+            float t = 0.0;
+            
+            bool hitHorizon = false;
+
+            // RAYMARCHING FÍSICO (A Lente Gravitacional)
+            for(int i = 0; i < MAX_STEPS; i++) {
+                float distToCenter = length(p);
+                
+                // Horizonte de Eventos
+                if(distToCenter < BH_RADIUS) {
+                    hitHorizon = true;
+                    // O buraco negro é preto
+                    col = mix(col, vec3(0.0), transmittance);
+                    break;
+                }
+                
+                // === A CORREÇÃO QUE VOCÊ PEDIU ===
+                // Gravidade: Curvar a luz em direção ao centro
+                // Aumentei a força em relação à V1 para garantir que vemos a parte de trás do disco
+                vec3 gravityDir = normalize(-p);
+                // Fórmula visual: força decai com a distância ao quadrado
+                float force = 1.8 / (distToCenter * distToCenter); 
+                
+                // Curvar o raio
+                float stepSize = max(0.05, distToCenter * 0.08); // Passo adaptativo
+                rd = normalize(rd + gravityDir * force * stepSize);
+                
+                // Mover o raio
+                vec3 prevP = p;
+                p += rd * stepSize;
+                t += stepSize;
+                
+                // Checar interseção com o plano do disco (Y=0)
+                // Se cruzamos o plano Y neste passo
+                if (prevP.y * p.y < 0.0 || abs(p.y) < 0.2) {
+                    // Renderizar disco
+                    vec4 diskSample = renderDisk(p);
+                    
+                    if (diskSample.a > 0.01) {
+                         // Acumulação de luz volumétrica
+                         col += diskSample.rgb * diskSample.a * transmittance * 0.8;
+                         transmittance *= (1.0 - diskSample.a * 0.5);
+                         if (transmittance < 0.05) break;
+                    }
+                }
+                
+                // Fuga (se o raio for muito longe)
+                if(distToCenter > 30.0) break;
+            }
+
+            // Fundo Estelar Simples (V1 style)
+            if (!hitHorizon) {
+                 float stars = pow(hash(rd.xy * 100.0), 50.0) * transmittance;
+                 col += vec3(stars);
+            }
+            
+            // Bloom / Glow final (Suaviza a imagem como no filme)
+            float glow = 0.0;
+            // Glow simples baseado na distância ao centro da tela
+            glow += 0.02 / length(uv);
+            col += vec3(1.0, 0.8, 0.6) * glow * transmittance;
+
+            // Tone Mapping para tirar o visual "lavado"
+            col = col / (col + vec3(1.0));
+            col = pow(col, vec3(0.4545)); // Gamma correction
+
+            gl_FragColor = vec4(col, 1.0);
+        }
+    </script>
+
+    <script>
+        let scene, camera, renderer, mesh;
+        let uniforms;
+
+        function init() {
+            const container = document.body;
+
+            scene = new THREE.Scene();
+            camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+            
+            const geometry = new THREE.PlaneBufferGeometry(2, 2);
+            
+            // Câmera posicionada como no filme
+            const virtualCamera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+            virtualCamera.position.set(0, 2, 12);
+            
+            uniforms = {
+                iTime: { value: 0 },
+                iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                cameraPos: { value: virtualCamera.position },
+                cameraTarget: { value: new THREE.Vector3(0, 0, 0) }
+            };
+
+            const material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexShader').textContent,
+                fragmentShader: document.getElementById('fragmentShader').textContent
+            });
+
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            const controls = new THREE.OrbitControls(virtualCamera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.minDistance = 3.0;
+            controls.maxDistance = 30.0;
+
+            window.addEventListener('resize', onWindowResize, false);
+
+            const animate = function (time) {
+                requestAnimationFrame(animate);
+                uniforms.iTime.value = time * 0.001;
+                controls.update();
+                uniforms.cameraPos.value.copy(virtualCamera.position);
+                renderer.render(scene, camera);
+            };
+
+            animate();
+        }
+
+        function onWindowResize() {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            uniforms.iResolution.value.x = window.innerWidth;
+            uniforms.iResolution.value.y = window.innerHeight;
+        }
+
+        init();
+    </script>
+</body>
+</html>

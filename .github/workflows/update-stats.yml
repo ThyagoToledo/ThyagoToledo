@@ -17,21 +17,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update README with authenticated stats
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: Update README with stats
         run: |
-          # Atualizar URLs com token no README.md
-          sed -i "s|&hide_border=true$|&hide_border=true\&include_all_commits=true\&count_private=true\&token=${PAT_TOKEN}|g" README.md
-          sed -i "s|&theme=tokyonight$|&theme=tokyonight\&token=${PAT_TOKEN}|g" README.md
+          # Atualizar URLs com parâmetros públicos no README.md
+          sed -i "s|&hide_border=true$|&hide_border=true\&include_all_commits=true|g" README.md
+          sed -i "s|&theme=tokyonight$|&theme=tokyonight|g" README.md
 
-      - name: Update index.html with authenticated stats
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+      - name: Update index.html with stats
         run: |
-          # Atualizar URLs com token no index.html
-          sed -i "s|&hide_border=true\" |&hide_border=true\&include_all_commits=true\&count_private=true\&token=${PAT_TOKEN}\" |g" index.html
-          sed -i "s|&theme=tokyonight\" |&theme=tokyonight\&token=${PAT_TOKEN}\" |g" index.html
+          # Atualizar URLs com parâmetros públicos no index.html
+          sed -i "s|&hide_border=true\" |&hide_border=true\&include_all_commits=true\" |g" index.html
+          sed -i "s|&theme=tokyonight\" |&theme=tokyonight\" |g" index.html
 
       - name: Commit and push changes
         run: |
@@ -42,6 +38,6 @@ jobs:
             echo "No changes detected"
           else
             git add README.md index.html
-            git commit -m "chore: Update GitHub Stats with authenticated token"
+            git commit -m "chore: Update GitHub Stats"
             git push
           fi

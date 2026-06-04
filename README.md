@@ -160,7 +160,7 @@
 | [penetrometre](https://github.com/ThyagoToledo/penetrometre) | Ferramenta de medição e análise — co-autoria com [cauacruvinel](https://github.com/cauacruvinel),  Certificado de Registro de Programa de Computador junto ao INPI. | Java/JavaFX |
 | [IgnisEngine](https://github.com/URSoftware/IgnisEngine) | Game engine desenvolvida pela URSoftware | Java |
 | [Site-Aprendendo-Programa-o](https://github.com/ThyagoToledo/Site-Aprendendo-Programa-o) | Site educativo para aprender programação | HTML · CSS · JavaScript |
-| [the-money-savior-telegram-bot](https://github.com/AmrmDev/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | GoLang · AWS · AWS Lambda |
+| [the-money-savior-telegram-bot](https://github.com/ThyagoToledo/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | GoLang · AWS · AWS Lambda |
 
 ---
 

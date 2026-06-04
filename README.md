@@ -59,6 +59,10 @@
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" height="45" alt="Go" title="Go" />
   <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" height="45" alt="Bash" title="Bash" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/powershell/powershell-original.svg" height="45" alt="PowerShell" title="PowerShell" />
+  <img width="12"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" height="30" alt="SQL" title="SQL" />
   <img width="12"/>
   <img src="https://img.shields.io/badge/GLSL-5586A4?style=flat-square&logo=opengl&logoColor=white" height="30" alt="GLSL" title="GLSL" />
@@ -83,14 +87,24 @@
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" height="45" alt="Three.js" title="Three.js" />
   <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" height="45" alt="FastAPI" title="FastAPI" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlalchemy/sqlalchemy-original.svg" height="45" alt="SQLAlchemy" title="SQLAlchemy" />
+  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gradle/gradle-original.svg" height="45" alt="Gradle" title="Gradle" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg" height="45" alt="Firebase" title="Firebase" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" height="45" alt="SQLite" title="SQLite" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/JavaFX-ED8B00?style=flat-square&logo=java&logoColor=white" height="30" alt="JavaFX" title="JavaFX" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/Room-3DDC84?style=flat-square&logo=android&logoColor=white" height="30" alt="Room" title="Room" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/Retrofit-007A87?style=flat-square&logo=android&logoColor=white" height="30" alt="Retrofit" title="Retrofit" />
 </div>
 
-**Cloud & Serviços**
+**Cloud & APIs de IA**
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="45" alt="AWS" title="AWS" />
@@ -102,6 +116,12 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" height="45" alt="PostgreSQL" title="PostgreSQL" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" height="45" alt="Docker" title="Docker" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/Google%20Gemini-8E75C2?style=flat-square&logo=googlegemini&logoColor=white" height="30" alt="Google Gemini" title="Google Gemini" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" height="30" alt="OpenAI" title="OpenAI" />
+  <img width="12"/>
+  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" height="30" alt="Hugging Face" title="Hugging Face" />
 </div>
 
 **Ferramentas & DevOps**
@@ -116,6 +136,8 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg" height="45" alt="IntelliJ IDEA" title="IntelliJ IDEA" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" height="45" alt="Android Studio" title="Android Studio" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" height="45" alt="GitHub Actions" title="GitHub Actions" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" height="45" alt="Vercel" title="Vercel" />
   <img width="12"/>

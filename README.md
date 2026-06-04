@@ -139,10 +139,10 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ThyagoToledo&theme=2077" alt="GitHub Stats Profile" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ThyagoToledo&theme=github_dark" alt="GitHub Stats Profile" />
   <br/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ThyagoToledo&theme=2077" alt="GitHub Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ThyagoToledo&theme=2077" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ThyagoToledo&theme=github_dark" alt="GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ThyagoToledo&theme=github_dark" alt="Top Languages" />
 </div>
 
 ---

@@ -21,13 +21,13 @@ jobs:
         run: |
           # Atualizar URLs com parâmetros públicos no README.md
           sed -i "s|&hide_border=true$|&hide_border=true\&include_all_commits=true|g" README.md
-          sed -i "s|&theme=2077$|&theme=2077|g" README.md
+          sed -i "s|&theme=github_dark$|&theme=github_dark|g" README.md
 
       - name: Update index.html with stats
         run: |
           # Atualizar URLs com parâmetros públicos no index.html
           sed -i "s|&hide_border=true\" |&hide_border=true\&include_all_commits=true\" |g" index.html
-          sed -i "s|&theme=2077\" |&theme=2077\" |g" index.html
+          sed -i "s|&theme=github_dark\" |&theme=github_dark\" |g" index.html
 
       - name: Commit and push changes
         run: |

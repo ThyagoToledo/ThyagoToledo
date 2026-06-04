@@ -61,6 +61,8 @@
   <img width="12"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" height="30" alt="SQL" title="SQL" />
   <img width="12"/>
+  <img src="https://img.shields.io/badge/GLSL-5586A4?style=flat-square&logo=opengl&logoColor=white" height="30" alt="GLSL" title="GLSL" />
+  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" height="45" alt="HTML5" title="HTML5" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="45" alt="CSS3" title="CSS3" />
@@ -80,6 +82,12 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" height="45" alt="React" title="React" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" height="45" alt="Three.js" title="Three.js" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gradle/gradle-original.svg" height="45" alt="Gradle" title="Gradle" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg" height="45" alt="Firebase" title="Firebase" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlite/sqlite-original.svg" height="45" alt="SQLite" title="SQLite" />
 </div>
 
 **Cloud & Serviços**
@@ -90,6 +98,10 @@
   <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazon-dynamodb&logoColor=white" height="30" alt="DynamoDB" title="DynamoDB" />
   <img width="12"/>
   <img src="https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat-square&logo=aws-lambda&logoColor=white" height="30" alt="AWS Lambda" title="AWS Lambda" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" height="45" alt="PostgreSQL" title="PostgreSQL" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" height="45" alt="Docker" title="Docker" />
 </div>
 
 **Ferramentas & DevOps**
@@ -103,7 +115,11 @@
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg" height="45" alt="IntelliJ IDEA" title="IntelliJ IDEA" />
   <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/androidstudio/androidstudio-original.svg" height="45" alt="Android Studio" title="Android Studio" />
+  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" height="45" alt="Vercel" title="Vercel" />
+  <img width="12"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" height="45" alt="npm" title="npm" />
 </div>
 
 ---
@@ -127,7 +143,7 @@
 | [Phaton](https://github.com/ThyagoToledo/Phaton-Edit-Imagem) | Editor de imagens online | HTML · CSS · JavaScript |
 | [MerlinGuru](https://github.com/ThyagoToledo/MerlinGuru) | Jogo de perguntas e respostas | Java |
 | [No-Redirect](https://github.com/ThyagoToledo/No-Redirect-Detect-Automatic-) | Extensão para Google Chrome | JavaScript |
-| [SkyNet](https://github.com/ThyagoToledo/SkyNet) | Scripts de automação e rede em Python | Python |
+| [YourLifeApp](https://github.com/ThyagoToledo/YourLifeApp) | App mobile nativo para Android | Kotlin |
 | [CalhasQualityDesktop](https://github.com/ThyagoToledo/CalhasQualityDesktop) | App desktop para gestão de orçamentos e estoque de calhas | Python · CustomTkinter · SQLite |
 | [penetrometre](https://github.com/ThyagoToledo/penetrometre) | Ferramenta de medição e análise — co-autoria com [cauacruvinel](https://github.com/cauacruvinel),  Certificado de Registro de Programa de Computador junto ao INPI. | Java/JavaFX |
 | [IgnisEngine](https://github.com/URSoftware/IgnisEngine) | Game engine desenvolvida pela URSoftware | Java |

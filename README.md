@@ -87,10 +87,6 @@
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg" height="45" alt="Three.js" title="Three.js" />
   <img width="12"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg" height="45" alt="FastAPI" title="FastAPI" />
-  <img width="12"/>
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sqlalchemy/sqlalchemy-original.svg" height="45" alt="SQLAlchemy" title="SQLAlchemy" />
-  <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/gradle/gradle-original.svg" height="45" alt="Gradle" title="Gradle" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-original.svg" height="45" alt="Firebase" title="Firebase" />
@@ -104,7 +100,7 @@
   <img src="https://img.shields.io/badge/Retrofit-007A87?style=flat-square&logo=android&logoColor=white" height="30" alt="Retrofit" title="Retrofit" />
 </div>
 
-**Cloud & APIs de IA**
+**Cloud & Serviços**
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="45" alt="AWS" title="AWS" />
@@ -116,12 +112,6 @@
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" height="45" alt="PostgreSQL" title="PostgreSQL" />
   <img width="12"/>
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" height="45" alt="Docker" title="Docker" />
-  <img width="12"/>
-  <img src="https://img.shields.io/badge/Google%20Gemini-8E75C2?style=flat-square&logo=googlegemini&logoColor=white" height="30" alt="Google Gemini" title="Google Gemini" />
-  <img width="12"/>
-  <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" height="30" alt="OpenAI" title="OpenAI" />
-  <img width="12"/>
-  <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" height="30" alt="Hugging Face" title="Hugging Face" />
 </div>
 
 **Ferramentas & DevOps**
@@ -149,10 +139,10 @@
 ### GitHub Stats
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ThyagoToledo&theme=tokyonight" alt="GitHub Stats Profile" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ThyagoToledo&theme=2077" alt="GitHub Stats Profile" />
   <br/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ThyagoToledo&theme=tokyonight" alt="GitHub Stats" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ThyagoToledo&theme=tokyonight" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ThyagoToledo&theme=2077" alt="GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ThyagoToledo&theme=2077" alt="Top Languages" />
 </div>
 
 ---

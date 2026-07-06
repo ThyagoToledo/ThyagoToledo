@@ -161,6 +161,10 @@
 | [IgnisEngine](https://github.com/URSoftware/IgnisEngine) | Game engine desenvolvida pela URSoftware | Java |
 | [Site-Aprendendo-Programa-o](https://github.com/ThyagoToledo/Site-Aprendendo-Programa-o) | Site educativo para aprender programação | HTML · CSS · JavaScript |
 | [the-money-savior-telegram-bot](https://github.com/ThyagoToledo/the-money-savior-telegram-bot) | Bot para Telegram de controle financeiro — co-autoria com [AmrmDev](https://github.com/AmrmDev) | GoLang · AWS · AWS Lambda |
+| [PlantiumAI](https://github.com/PlantiumAI/PlantiumAI) | Monitoramento inteligente para micro estufas e plantações verticais com sensores IoT (ESP32), plataforma web e app desktop | Next.js · Tauri · Rust · ESP32 |
+| [Penetrômetro Mobile](https://github.com/ThyagoToledo/Penetr-metro-Mobile) | App Android para medição e análise de compactação do solo, migrado do sistema desktop Penetrometer Project (IF Goiano) | Flutter · Dart · SQLite |
+| [TreinamentoOIAA](https://github.com/IF-Goiano-Campus-Hidrolandia-Alunos/TreinamentoOIAA) | Plataforma de gerenciamento e pontuação para o Desafio Técnico de Inteligência Artificial (OIAA) do IF Goiano - Campus Hidrolândia | React · TypeScript · PostgreSQL |
+| [The Lost Hero](https://github.com/ThyagoToledo/TheLostHero) | RPG 2D com sistema de combate por turnos, exploração de mapa e NPCs interativos | Java · Java Swing |
 
 ---
 

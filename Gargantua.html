@@ -46,7 +46,7 @@
         varying vec2 vUv;
 
         // Configurações (mesma geometria, mais qualidade)
-        #define MAX_STEPS 160
+        #define MAX_STEPS 280
         #define BH_RADIUS 1.5
         #define ACCRETION_INNER 2.2
         #define ACCRETION_OUTER 16.0 // Mais amplo como no filme
@@ -236,9 +236,16 @@
                 // Fórmula visual: força decai com a distância ao quadrado
                 float force = 1.8 / (distToCenter * distToCenter); 
                 
-                // Passo adaptativo: menor perto do centro e do plano do disco
-                float stepSize = max(0.04, distToCenter * 0.06);
-                stepSize = min(stepSize, max(0.05, abs(p.y) * 0.6 + 0.03));
+                // Passo adaptativo: no espaço vazio fora do disco usa passo radial amplo;
+                // só reduz perto do plano Y=0 quando o raio já está na região radial do disco.
+                float radialStep = max(0.04, distToCenter * 0.06);
+                float stepSize = radialStep;
+                if (distToCenter < ACCRETION_OUTER + 1.5 && distToCenter > BH_RADIUS) {
+                    float grazing = 1.0 - clamp(abs(rd.y) * 5.0, 0.0, 1.0);
+                    float minPlaneStep = mix(0.05, clamp(distToCenter * 0.012, 0.05, 0.14), grazing);
+                    float planeStep = max(minPlaneStep, abs(p.y) * 0.6 + 0.03);
+                    stepSize = min(radialStep, planeStep);
+                }
                 rd = normalize(rd + gravityDir * force * stepSize);
                 
                 // Mover o raio
@@ -247,10 +254,10 @@
                 t += stepSize;
                 
                 // Checar interseção com o plano do disco (Y=0)
-                // Se cruzamos o plano Y neste passo
+                // Usa o ponto médio do passo para integração suave e sem faixas (banding)
                 if (prevP.y * p.y < 0.0 || abs(p.y) < 0.15) {
-                    // Renderizar disco
-                    vec4 diskSample = renderDisk(p);
+                    vec3 samplePos = 0.5 * (prevP + p);
+                    vec4 diskSample = renderDisk(samplePos);
 
                     if (diskSample.a > 0.01) {
                          // Acumulação volumétrica ponderada pelo passo
@@ -268,8 +275,8 @@
                     col += vec3(1.0, 0.92, 0.78) * ring * 0.045 * transmittance;
                 }
                 
-                // Fuga (se o raio for muito longe)
-                if(distToCenter > 30.0) break;
+                // Fuga (se o raio for muito longe, acima do maxDistance=30 da câmera)
+                if(distToCenter > 50.0) break;
             }
 
             // Fundo Estelar (estável, com brilho e cor variados)
